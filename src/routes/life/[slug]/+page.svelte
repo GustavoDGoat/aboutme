@@ -17,7 +17,7 @@
 	</div>
 
 	<div border-base border-t mt-16 pt-8>
-		<a href='/life' text-accent-100 hover:underline>
+		<a href='/life' class='text-accent-100 hover:underline'>
 			← Back to Life
 		</a>
 	</div>

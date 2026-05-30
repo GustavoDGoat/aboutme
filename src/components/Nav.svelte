@@ -20,7 +20,7 @@
 		absolute
 		h-0.5
 		w-full
-	/>
+	></span>
 {/snippet}
 
 <header
@@ -79,7 +79,7 @@
 				>
 					<div fyc>
 						{name}
-						{#if icon != null} <span class={icon} aria-hidden='true' /> {/if}
+						{#if icon != null} <span class={icon} aria-hidden='true'></span> {/if}
 					</div>
 					{@render underline(isPath, false)}
 				</a>
@@ -88,11 +88,11 @@
 		<div flex gap='4 md:2' items-center view-transition--nav-icons>
 			<DarkMode.ToggleButton>
 				{#snippet dark()}
-					<span class='i-line-md:sunny-filled-loop-to-moon-filled-transition dark-mode-icon' aria-hidden='true' />
+					<span class='i-line-md:sunny-filled-loop-to-moon-filled-transition dark-mode-icon' aria-hidden='true'></span>
 				{/snippet}
 
 				{#snippet light()}
-					<span class='i-line-md:moon-filled-to-sunny-filled-loop-transition dark-mode-icon' aria-hidden='true' />
+					<span class='i-line-md:moon-filled-to-sunny-filled-loop-transition dark-mode-icon' aria-hidden='true'></span>
 				{/snippet}
 			</DarkMode.ToggleButton>
 			<a

@@ -31,7 +31,7 @@
 			>
 				<div fyc gap-3 mb-2>
 					<h3 font-bold text-xl>{product.name}</h3>
-					<span class='i-line-md:external-link-rounded' op50 />
+					<span class='i-line-md:external-link-rounded' op50></span>
 				</div>
 				<p op70>{product.description}</p>
 			</article>

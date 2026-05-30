@@ -17,7 +17,6 @@
 	import './collapse.css';
 
 	const { data } = $props();
-	const { metadata, Markdown } = data;
 
 	const url = ufo.joinURL(PUBLIC_ORIGIN, page.url.pathname);
 	const mdUrl = `${page.url.pathname}.md`;
@@ -36,7 +35,7 @@
 	min-w-0
 	mxa
 >
-	{#if !metadata.isPublished}
+	{#if !data.metadata.isPublished}
 		<p bg-red text='4xl center'>This article is not published yet.</p>
 	{/if}
 
@@ -44,10 +43,10 @@
 		<LargeTitle
 			opacity={false}
 			selectDisabled={false}
-			title={metadata.title}
-			viewTransitionName='blog-{metadata.slug}'
+			title={data.metadata.title}
+			viewTransitionName='blog-{data.metadata.slug}'
 		/>
-		<p text-text-400>{formatDate(new Date(metadata.pubDate))} ・ {metadata.readingTime.text} ・ <a class='hover:op100' aria-label='Markdown source' href={mdUrl} op70 rel='noopener noreferrer' target='_blank'><IconMarkdown class='inline align-middle' aria-hidden='true' /></a></p>
+		<p text-text-400>{formatDate(new Date(data.metadata.pubDate))} ・ {data.metadata.readingTime.text} ・ <a class='hover:op100' aria-label='Markdown source' href={mdUrl} op70 rel='noopener noreferrer' target='_blank'><IconMarkdown class='inline align-middle' aria-hidden='true' /></a></p>
 	</hgroup>
 
 	<div p2>
@@ -55,7 +54,7 @@
 	</div>
 
 	<article class={['prose dark:prose-invert', !dev && 'slide-enter-content']} mxa pb-8 text-text='700 dark:200'>
-		<Markdown />
+		<data.Markdown />
 	</article>
 	<div op50 pb-8>
 		<span op70>share on</span>

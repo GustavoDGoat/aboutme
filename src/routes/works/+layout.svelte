@@ -35,7 +35,7 @@
 					'op40 hover:op100 transition-base pb-1 border-b-2 border-transparent': !isCurrent,
 				}}
 				aria-current={isCurrent ? 'page' : undefined}
-				href={isCurrent ? null : lowercaseRoute}
+				href={isCurrent ? undefined : lowercaseRoute}
 				tracking-wider
 				uppercase
 			>{capitalize(route)}</a>

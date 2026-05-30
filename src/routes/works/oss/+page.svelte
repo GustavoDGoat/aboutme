@@ -23,7 +23,7 @@
 			rel='noopener noreferrer'
 			target='_blank'
 		>
-			<span class='i-ph-github-logo-duotone' aria-hidden='true' /> GitHub
+			<span class='i-ph-github-logo-duotone' aria-hidden='true'></span> GitHub
 		</a>
 	</div>
 
@@ -44,7 +44,7 @@
 			>
 				<div fyc gap-3 mb-2>
 					<h3 font-bold text-xl>{project.name}</h3>
-					<span class='i-line-md:external-link-rounded' op50 />
+					<span class='i-line-md:external-link-rounded' op50></span>
 				</div>
 				<p op70>{project.description}</p>
 			</article>
