@@ -5,44 +5,31 @@
 
 <article
 	container
-	gcc
+	fcc
+	gap-8
 	mt8
 	mxa
+	text-center
 >
 	<div animate='duration-1000 keyframes-flip-in-x'>
 		<Profile />
 	</div>
-	<div mt8>
-		<h1
-			style:view-transition-name='title-ryoppippi'
-			font-bold
-			mb6
-			text='4xl center'
+
+	<h1
+		style:view-transition-name='title-gustavodgoat'
+		font-bold
+	>
+		<span block text='4xl'>Gustavo D Goat</span>
+		<span
+			animate-pulse
+			block
+			font-medium
+			mt2
+			text='xl text-700 dark:text-200'
 		>
-			<span
-				block
-				inline='sm:~'
-			>
-				@ryoppippi
-			</span>
-			<span
-				animate-pulse
-				font-medium
-				text='center xl text-700 dark:text-200'
-			>
-				Engineer
+			Billonaire Playboy and not a philanthropist
+		</span>
+	</h1>
 
-			</span>
-
-		</h1>
-	</div>
-</article>
-
-<div
-	container
-	fcc
-	h-full
-	mxa
->
 	<Social />
-</div>
+</article>

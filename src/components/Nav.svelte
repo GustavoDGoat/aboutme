@@ -1,26 +1,16 @@
 <script lang='ts'>
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
-	import { PUBLIC_ORIGIN } from '$env/static/public';
 	import * as DarkMode from 'svelte-fancy-darkmode';
-	import * as ufo from 'ufo';
-	import MoonToSunny from '~icons/line-md/moon-filled-to-sunny-filled-loop-transition';
-	import SunnyToMoon from '~icons/line-md/sunny-filled-loop-to-moon-filled-transition';
 
 	const LINKS = [
 		{ name: 'works', href: resolve('/works') },
 		{ name: 'blog', href: resolve('/blog') },
-		{ name: 'sponsors', href: resolve('/sponsors') },
-		{
-			name: 'cv',
-			href: ufo.joinURL(PUBLIC_ORIGIN, '/cv'),
-			icon: 'i-line-md:download-outline',
-		},
+		{ name: 'life', href: resolve('/life') },
 	] as const satisfies { href: string; name: string; icon?: string }[];
 </script>
 
 {#snippet underline(isPath: boolean, transparentDefault = false)}
-	<!-- svelte-ignore element_invalid_self_closing_tag -->
 	<span
 		class={{
 			'bg-accent-100': isPath,
@@ -55,10 +45,10 @@
 			relative
 		>
 			<div
-				style:view-transition-name='title-ryoppippi'
+				style:view-transition-name='title-gustavodgoat'
 				class={{ hidden: page.url.pathname === '/' }}
 			>
-				@ryoppippi
+				@GustavoDDoat
 			</div>
 			<div>{@render underline(page.url.pathname === '/', true)}</div>
 		</a>
@@ -66,7 +56,7 @@
 	<nav
 		aria-label='Primary navigation'
 		col-span-2
-		flex='wrap  '
+		flex='wrap'
 		font-bold
 		fxc
 		gap-4
@@ -89,51 +79,44 @@
 				>
 					<div fyc>
 						{name}
-						<!-- svelte-ignore element_invalid_self_closing_tag -->
 						{#if icon != null} <span class={icon} aria-hidden='true' /> {/if}
 					</div>
 					{@render underline(isPath, false)}
 				</a>
 			{/each}
 		</div>
-		<div flex gap='4 md:2' view-transition--nav-icons>
+		<div flex gap='4 md:2' items-center view-transition--nav-icons>
 			<DarkMode.ToggleButton>
 				{#snippet dark()}
-					<SunnyToMoon />
+					<span class='i-line-md:sunny-filled-loop-to-moon-filled-transition dark-mode-icon' aria-hidden='true' />
 				{/snippet}
 
 				{#snippet light()}
-					<MoonToSunny />
+					<span class='i-line-md:moon-filled-to-sunny-filled-loop-transition dark-mode-icon' aria-hidden='true' />
 				{/snippet}
 			</DarkMode.ToggleButton>
-			<a
-				class='i-line-md:rss'
-				aria-label='RSS feed'
-				fyc
-				href={resolve('/feed.xml')}
-				mya
-				rel='noopener noreferrer'
-				target='_blank'
-			>
-				RSS feed
-			</a>
 			<a
 				class='i-teenyicons:github-solid'
 				aria-label='Source code on GitHub'
 				fyc
-				href='https://github.com/ryoppippi/ryoppippi.com'
+				href='https://github.com/GustavoDGoat'
 				mya
 				rel='noopener noreferrer'
 				target='_blank'
 			>
-				Source code
+				GitHub
 			</a>
 		</div>
 	</nav>
 </header>
 
 <style>
-a{
+a {
 	--uno: no-underline;
+}
+:global(.dark-mode-icon) {
+	width: 1.5em;
+	height: 1.5em;
+	cursor: pointer;
 }
 </style>

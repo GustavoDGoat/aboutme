@@ -22,8 +22,7 @@
 	const url = ufo.joinURL(PUBLIC_ORIGIN, page.url.pathname);
 	const mdUrl = `${page.url.pathname}.md`;
 	const shareText = (account: string) => encodeURIComponent(`Reading ${account}\'s ${url}\n\nI think...`);
-	const tweetUrl = `https://twitter.com/intent/tweet?text=${shareText('@ryoppippi')}`;
-	const bskyUrl = `https://bsky.app/intent/compose?text=${shareText('@ryoppippi.com')}`;
+	const tweetUrl = `https://twitter.com/intent/tweet?text=${shareText('@Gustavo_DGoat')}`;
 
 /* eslint svelte/no-at-html-tags: 0 */
 </script>
@@ -59,14 +58,14 @@
 		<Markdown />
 	</article>
 	<div op50 pb-8>
-		<span op70>comment on</span>
-		<a href={bskyUrl} rel='noopener noreferrer' target='_blank'>bluesky</a>
-		<span op35> / </span>
+		<span op70>share on</span>
 		<a href={tweetUrl} rel='noopener noreferrer' target='_blank'>twitter</a>
+		<span op35> / </span>
+		<a href='https://github.com/GustavoDGoat' rel='noopener noreferrer' target='_blank'>github</a>
 	</div>
 
 	<div op50 pb-8>
-		<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' rel='noopener noreferrer' target='_blank'>CC BY-NC-SA 4.0</a> 2022-PRESENT © ryoppippi
+		<a href='https://creativecommons.org/licenses/by-nc-sa/4.0/' rel='noopener noreferrer' target='_blank'>CC BY-NC-SA 4.0</a> 2022-PRESENT © Gustavo D Goat
 	</div>
 </div>
 

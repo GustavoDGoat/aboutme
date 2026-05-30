@@ -6,7 +6,7 @@ import { OssProjects, ParsedProject, ProjectsByGenre, UnghRepo, Url } from './ty
 
 const GITHUB_URL = `https://github.com`;
 const UNGH_URL = `https://ungh.cc`;
-const GITHUB_USERNAME = `ryoppippi`;
+const GITHUB_USERNAME = `GustavoDGoat`;
 
 /**
  * Processes a single project: adds a link if missing, fetches repo info if description is missing.

@@ -1,5 +1,4 @@
 import type { PresetUnoTheme } from 'unocss';
-import { presetRyoppippi } from '@ryoppippi/unocss-preset';
 
 import { deepMerge } from '@std/collections/deep-merge';
 import {
@@ -13,14 +12,6 @@ import {
 	transformerVariantGroup,
 } from 'unocss';
 import { presetFluid } from 'unocss-preset-fluid';
-
-// TODO: bug of unocss
-import ossProjects from './src/contents/works/oss/list.json';
-
-const projectSafelist: string[] = [];
-Object.values(ossProjects).forEach((projects) => {
-	projectSafelist.push(...projects.map(project => project.icon));
-});
 
 const theme = {
 	colors: {
@@ -79,7 +70,6 @@ export default defineConfig({
 			},
 		}),
 		presetFluid(),
-		presetRyoppippi(),
 	],
 	transformers: [
 		transformerDirectives(),
@@ -109,5 +99,5 @@ export default defineConfig({
 	],
 	rules: [
 	],
-	safelist: [...projectSafelist, 'i-mdi:arrow-left-bottom'],
+	safelist: ['i-mdi:arrow-left-bottom'],
 });

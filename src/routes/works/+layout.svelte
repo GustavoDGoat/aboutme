@@ -1,39 +1,43 @@
 <script lang='ts'>
 	import { page } from '$app/state';
-	import ProjectTitle from '$components/ProjectTitle.svelte';
 	import { capitalize, lowercase } from '@ryoppippi/str-fns';
 
 	const routes = [
-		'OSS',
-		'showcase',
-		'talks',
-		'publications',
+		'products',
+		'rust',
+		'oss',
+		'jojo',
 	] as const;
 
 	const { children } = $props();
 </script>
 
 <div>
-	<ProjectTitle />
+	<div font-mono mb-8 text-center>
+		<h1 font-bold op70 pb-2 text-5xl>Works</h1>
+	</div>
 
 	<nav
 		aria-label='Works sections'
-		fcol-sm-row
-		fw
-		gap='1 sm:3'
-		mb-8
-		text-3xl
+		flex
+		font-mono
+		gap-8
+		justify-center
+		mb-12
+		text-lg
 	>
 		{#each routes as route (route)}
 			{@const lowercaseRoute = lowercase(route)}
 			{@const isCurrent = page.route.id?.endsWith(lowercaseRoute)}
 			<a
-				style:--nav-title='project-nav-{route}'
-				style:view-transition-name='project-nav-{route}'
-				class={{ op70: isCurrent }}
+				class={{
+					'text-text-800 dark:text-text-100 font-bold border-b-2 border-accent-100 pb-1': isCurrent,
+					'op40 hover:op100 transition-base pb-1 border-b-2 border-transparent': !isCurrent,
+				}}
 				aria-current={isCurrent ? 'page' : undefined}
 				href={isCurrent ? null : lowercaseRoute}
-				op20
+				tracking-wider
+				uppercase
 			>{capitalize(route)}</a>
 		{/each}
 	</nav>

@@ -30,21 +30,13 @@
 
 	const title = $derived(page.data.title ?? 'home');
 	const hostname = ufo.parseURL(PUBLIC_ORIGIN).host ?? page.url.hostname;
-	const ryoppippi = ufo.joinURL(PUBLIC_ORIGIN, asset('/ryoppippi.jpg'));
-	const description = `Portfolio of @ryoppippi`;
+	const gustavodgoat = ufo.joinURL(PUBLIC_ORIGIN, asset('/profile.jpg'));
+	const description = `Portfolio of Gustavo D Goat`;
 </script>
 
 <DarkModeHeader themeColors={{ dark: '#121212', light: '#ffffff' }} />
 
 <MetaTags
-	additionalLinkTags={[
-		{
-			rel: 'alternate',
-			title: description,
-			type: 'application/rss+xml',
-			href: '/feed.xml',
-		},
-	]}
 	additionalMetaTags={[
 		{
 			name: 'Hatena::Bookmark',
@@ -68,8 +60,8 @@
 		description,
 		images: [
 			{
-				url: ryoppippi,
-				alt: 'ryoppippi\'s icon',
+				url: gustavodgoat,
+				alt: 'Gustavo D Goat profile photo',
 			},
 		],
 	}}
@@ -79,11 +71,11 @@
 		: hostname}
 	twitter={{
 		cardType: 'summary',
-		site: '@ryoppippi',
+		site: '@Gustavo_DGoat',
 		title,
 		description,
-		image: ryoppippi,
-		imageAlt: 'ryoppippi\'s icon',
+		image: gustavodgoat,
+		imageAlt: 'Gustavo D Goat profile photo',
 	}}
 />
 <svelte:head>

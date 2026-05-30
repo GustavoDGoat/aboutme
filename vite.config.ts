@@ -40,10 +40,10 @@ export default defineConfig({
 		/* favicon と metadata の設定 */
 		faviconsPlugin({
 			cache: true,
-			imgSrc: relativePath('./static/ryoppippi.jpg'),
+			imgSrc: relativePath('./static/profile.jpg'),
 			/* ===== metadataの設定 ===== */
 			path: `/favicons`,
-			lang: 'ja-JP',
+			lang: 'en-US',
 			orientation: 'portrait',
 			icons: {
 				android: false,

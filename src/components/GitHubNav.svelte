@@ -30,9 +30,7 @@
 	prose='~ dark:invert'
 >
 	<div fxc gap-2>
-		{@render link('/pr', 'i-ph-git-pull-request-duotone', 'btn-green', 'My Recent PRs')}
-		{@render link('/gh', 'i-ph-github-logo-duotone', 'btn-blue', 'GitHub')}
-		{@render link('/gh-by-stars', 'i-ph-star', 'btn-pink', 'Sort by Stars')}
+		{@render link('/github', 'i-ph-github-logo-duotone', 'btn-blue', 'GitHub')}
 	</div>
 
 </div>
