@@ -2,7 +2,6 @@
 	import type { Project } from '$contents/works/oss/types';
 
 	const { project }: { project: typeof Project.infer } = $props();
-	const { name, description, icon, link, slug } = project;
 </script>
 
 <!-- card conmponrnt -->
@@ -10,7 +9,7 @@
 	font-sans
 	grid='~ cols-5'
 	hover='scale-101 shadow-xl z-10 bg-[#88888811]'
-	href={link}
+	href={project.link}
 	max-w-full
 	no-underline
 	op-card
@@ -21,21 +20,21 @@
 >
 	<!-- svelte-ignore element_invalid_self_closing_tag -->
 	<div
-		style:view-transition-name={slug}
+		style:view-transition-name={project.slug}
 		aria-hidden='true'
 		gcc
 	>
-		<div class={icon} op50 text-3xl />
+		<div class={project.icon} op50 text-3xl></div>
 	</div>
 	<div
 		fcol
 		grid-col-span-4
 	>
 		<div text-lg truncate>
-			{name}
+			{project.name}
 		</div>
 		<p h-8 line-clamp-2 text-xs>
-			{description ?? ''}
+			{project.description ?? ''}
 		</p>
 	</div>
 </a>

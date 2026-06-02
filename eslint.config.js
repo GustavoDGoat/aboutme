@@ -14,5 +14,10 @@ export default ryoppippi({
 }, {
 	rules: {
 		'antfu/no-top-level-await': 'off',
+		'svelte/html-self-closing': ['error', {
+			void: 'always',
+			normal: 'never',
+			component: 'always',
+		}],
 	},
 });

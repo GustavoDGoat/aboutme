@@ -25,6 +25,9 @@
 		"preview": "vite preview",
 		"sync": "svelte-kit sync"
 	},
+	"dependencies": {
+		"sveltweet": "^0.5.1"
+	},
 	"devDependencies": {
 		"@antfu/ni": "^30.1.0",
 		"@clack/prompts": "^1.3.0",

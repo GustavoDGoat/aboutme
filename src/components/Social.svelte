@@ -29,7 +29,7 @@
 					class={_class}
 					aria-hidden='true'
 					text-size='[--size]'
-				/>
+				></div>
 			</a>
 		</div>
 	{/each}

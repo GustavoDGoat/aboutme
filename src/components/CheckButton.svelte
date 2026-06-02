@@ -29,6 +29,6 @@
 			'i-carbon-checkbox-checked': checked,
 		}}
 		aria-hidden='true'
-	/>
+	></div>
 	{text}
 </button>

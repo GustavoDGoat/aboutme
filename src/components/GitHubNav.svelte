@@ -19,7 +19,7 @@
 		target='_blank'
 	>
 		<!-- svelte-ignore element_invalid_self_closing_tag -->
-		<span class={icon} aria-hidden='true' /> {name}
+		<span class={icon} aria-hidden='true'></span> {name}
 	</a>
 {/snippet}
 

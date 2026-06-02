@@ -1,18 +1,24 @@
+import type { Component } from 'svelte';
 import type { PageLoad } from './$types';
 import { error } from '@sveltejs/kit';
 import { isDevelopment } from 'std-env';
 
-type PostMetadata = {
+type LifeMetadata = {
 	isPublished: boolean;
 	title: string;
 	date?: string;
+};
+
+type LifeImport = {
+	default: Component;
+	metadata: LifeMetadata;
 };
 
 export const load = (async ({ params }) => {
 	const { slug } = params;
 
 	try {
-		const post = await import(`../../../contents/life/${slug}/index.md`) as { metadata: PostMetadata; default: React.ComponentType };
+		const post = await import(`../../../contents/life/${slug}/index.md`) as LifeImport;
 
 		if (!isDevelopment && !post.metadata.isPublished) {
 			throw error(404, 'Post not found');
@@ -26,7 +32,7 @@ export const load = (async ({ params }) => {
 	}
 	catch {
 		try {
-			const post = await import(`../../../contents/life/${slug}.md`) as { metadata: PostMetadata; default: React.ComponentType };
+			const post = await import(`../../../contents/life/${slug}.md`) as LifeImport;
 
 			if (!isDevelopment && !post.metadata.isPublished) {
 				throw error(404, 'Post not found');

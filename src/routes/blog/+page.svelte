@@ -12,7 +12,7 @@
 	<div flex gap-2 items-start my-2>
 		<span mt-0.5>
 			<!-- svelte-ignore element_invalid_self_closing_tag -->
-			<div class='i-simple-icons-markdown blog-list-icon' aria-hidden='true' />
+			<div class='i-simple-icons-markdown blog-list-icon' aria-hidden='true'></div>
 		</span>
 		<p
 			style:view-transition-name='blog-{item.slug}'
