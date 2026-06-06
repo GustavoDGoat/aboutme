@@ -1,0 +1,2 @@
+import{L as e,Q as t,S as n,V as r,Z as i,nt as a,tt as o,w as s,x as c}from"../chunks/RLCu4mQT.js";import"../chunks/C8lgd_TL.js";import{t as l}from"../chunks/BavAMFd7.js";var u=s(`<div fcol="" gcc="" pt-10=""> <div p2=""><hr ma="" op25="" w-50=""/></div> <a href="/">Return to Home</a></div>`);function d(s,d){t(d,!0);var f=u(),p=r(f);o(3),a(f),e(()=>c(p,`${l.url??``}
+	${l.status??``} `)),n(s,f),i()}export{d as component};
