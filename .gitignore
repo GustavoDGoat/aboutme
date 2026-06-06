@@ -1,6 +1,6 @@
 .DS_Store
 node_modules
-/build
+# /build  -- tracked for pre-compiled deployment on Pxxl
 /.svelte-kit
 /package
 .env

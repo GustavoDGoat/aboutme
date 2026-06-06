@@ -1,0 +1,1 @@
+export const env={"PUBLIC_ORIGIN":"https://gusatavodgoat.xyz"}
